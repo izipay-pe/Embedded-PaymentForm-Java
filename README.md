@@ -26,12 +26,19 @@ Este manual está diseñado para ayudarte a comprender el flujo de la integraci�
 
 - Comprender el flujo de comunicación de la pasarela. [Información Aquí](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/start.html)
 - Extraer credenciales del Back Office Vendedor. [Guía Aquí](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
-- Java 7 o superior
-- Para este proyecto utilizamos la herramienta Visual Studio Code.
+- Para este proyecto utilizamos la herramienta Apache NetBeans 15. [Información Aquí](https://netbeans.apache.org/front/main/index.html)
+- Para este proyecto utilizaremos el servidor de aplicaciones Apache Tomcat® 9. [Información Aquí](https://tomcat.apache.org/)
+
   > [!NOTE]
   > Tener en cuenta que, para que el desarrollo de tu proyecto, eres libre de emplear tus herramientas preferidas.
+  > Otra alternativa a Apache NetBeans es Visual Studio Cod con JAVA. [Información Aquí](https://code.visualstudio.com/docs/java/java-tutorial)
+  > Para Visual Studio Cod utilizaremnos el servidor de aplicaciones Apache Tomcat®, en la siguiente guia. [Guía Aquí](https://code.visualstudio.com/docs/java/java-tomcat-jetty)
 
 ## 3. Despliegue
+
+### Instalar Live Server
+
+Descargar el servidor de aplicaciones Apache Tomcat® 9 [Información Aquí](https://tomcat.apache.org/) y descomprimir.
 
 ### Clonar el proyecto:
 
@@ -39,29 +46,38 @@ Este manual está diseñado para ayudarte a comprender el flujo de la integraci�
 git clone [https://github.com/izipay-pe/Embedded-PaymentForm-Java.git]
 ```
 
+### Ejecutar proyecto
+
+- Abrir el proyecto con Apache NetBeans 15.
+- Configurar su servidor preferido, en este caso el servidor de aplicaciones Apache Tomcat® 9 desde la ruta de la carpeta descomprimida.
+- Compilar el proyecto.
+
 ## 4. Datos de conexión
 
 **Nota**: Reemplace **[CHANGE_ME]** con sus credenciales de `API REST` extraídas desde el Back Office Vendedor, ver [Requisitos Previos](#Requisitos_Previos).
 
-- Editar en `config.properties`:
+- Editar las credenciales de acceso en `src/main/webapp/WEB-INF/Config/credenciales.properties`:
 
-```sh
-// Identificador de su tienda
-site_id= [CHANGE_ME]
-
-// Clave de Test
-key_test= [CHANGE_ME]
-
-// Clave de Producción
-key_prod= [CHANGE_ME]
-
-// Método
-
-return_mode=POST
-
-// URL del servidor de Izipay
-gateway_url=https://api.micuentaweb.pe
 ```
+# Shop ID: 8-digits shop ID provided in your Back Office (Menu: Settings > Shop > Keys).
+site_id=[CHANGE_ME]
+
+# Test key: Provided in your Back Office (Menu: Settings > Shop > Keys).
+key_test=[CHANGE_ME]
+
+# Production key: provided in your Back Office (Menu: Settings > Shop > Keys).
+key_prod=[CHANGE_ME]
+```
+
+- Editar la llave publica en `src/main/webapp/FormularioIncrustado.jsp`:
+
+  ```js
+  <script
+  	src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
+  	kr-public-key="[CHANGE_ME_PUBLIC_KEY]"
+  	kr-post-url-success="paid.php"
+  ></script>
+  ```
 
 ## 5. Transacción de prueba
 
@@ -84,12 +100,12 @@ La IPN es una notificación de servidor a servidor (servidor de Izipay hacia el 
 Los datos transmitidos en la IPN se reciben y analizan mediante un script que el vendedor habrá desarrollado en su servidor.
 
 - Ver manual de implementación de la IPN. [Aquí](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/kb/payment_done.html)
-- Vea el ejemplo de la respuesta IPN con PHP. [Aquí](https://github.com/izipay-pe/Redirect-PaymentForm-IpnT1-PHP)
-- Vea el ejemplo de la respuesta IPN con NODE.JS. [Aquí](https://github.com/izipay-pe/Response-PaymentFormT1-Ipn)
+- Vea el ejemplo de la respuesta IPN con PHP. [Aquí](https://github.com/izipay-pe/Server-IPN-Php)
+- Vea el ejemplo de la respuesta IPN con NODE.JS. [Aquí](https://github.com/izipay-pe/Server-IPN-JavaScript)
 
 ## 7. Personalización
 
-Si deseas aplicar cambios específicos en la apariencia de la pasarela de pago, puedes lograrlo mediante la modificación de código CSS. En este enlace [Código CSS - Incrustado](https://github.com/izipay-pe/Personalizacion-PaymentForm-Incrustado) podrá encontrar nuestro script para un formulario incrustado.
+Si deseas aplicar cambios específicos en la apariencia de la pasarela de pago, puedes lograrlo mediante la modificación de código CSS. En este enlace [Código CSS - Incrustado](https://github.com/izipay-pe/Personalizacion/tree/main/Formulario%20Incrustado) podrá encontrar nuestro script para un formulario incrustado.
 
 ## 8. Consideraciones
 
