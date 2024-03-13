@@ -43,7 +43,7 @@ Descargar el servidor de aplicaciones Apache Tomcat® 9 [Información Aquí](htt
 ### Clonar el proyecto:
 
 ```sh
-git clone [https://github.com/izipay-pe/Embedded-PaymentForm-Java.git]
+git clone https://github.com/izipay-pe/Embedded-PaymentForm-Java.git
 ```
 
 ### Ejecutar proyecto
