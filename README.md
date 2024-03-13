@@ -58,16 +58,16 @@ git clone [https://github.com/izipay-pe/Embedded-PaymentForm-Java.git]
 
 - Editar las credenciales de acceso en `src/main/webapp/WEB-INF/Config/credenciales.properties`:
 
-```
-# Shop ID: 8-digits shop ID provided in your Back Office (Menu: Settings > Shop > Keys).
-site_id=[CHANGE_ME]
-
-# Test key: Provided in your Back Office (Menu: Settings > Shop > Keys).
-key_test=[CHANGE_ME]
-
-# Production key: provided in your Back Office (Menu: Settings > Shop > Keys).
-key_prod=[CHANGE_ME]
-```
+  ```
+  # Shop ID: 8-digits shop ID provided in your Back Office (Menu: Settings > Shop > Keys).
+  site_id=[CHANGE_ME]
+  
+  # Test key: Provided in your Back Office (Menu: Settings > Shop > Keys).
+  key_test=[CHANGE_ME]
+  
+  # Production key: provided in your Back Office (Menu: Settings > Shop > Keys).
+  key_prod=[CHANGE_ME]
+  ```
 
 - Editar la llave publica en `src/main/webapp/FormularioIncrustado.jsp`:
 
