@@ -20,21 +20,21 @@
   <script 
    src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
    kr-public-key="~~CHANGE_ME_PUBLIC_KEY~~"
-   kr-post-url-success="paid.php">
+   kr-post-url-success="paid">
   </script>
 
   <!-- theme and plugins. should be loaded after the javascript library -->
   <!-- not mandatory but helps to have a nice payment form out of the box -->
   <link type="text/css" rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic-reset.css">
+  <link rel="stylesheet" href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/neon-reset.min.css">
   <script 
-   src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.js">
+   src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/neon.js">
   </script>
 </head>
 <body>
     
     <div class="formulario" >
-        <img src="image/logo-250x102.png"/>
+	<img src="https://iziweb001b.s3.amazonaws.com/webresources/img/logo.png" width="150" alt="" />
         <div class="py-5 text-center">      
             <h2>Ejemplo de un formulario incrustado con JAVA</h2>
             <p class="lead"></p>
