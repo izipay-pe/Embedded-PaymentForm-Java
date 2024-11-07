@@ -32,10 +32,10 @@ Este manual está diseñado para ayudarte a comprender el flujo de la integraci�
 - Para este proyecto utilizamos la herramienta Apache NetBeans 15. [Información Aquí](https://netbeans.apache.org/front/main/index.html)
 - Para este proyecto utilizaremos el servidor de aplicaciones Apache Tomcat® 9. [Información Aquí](https://tomcat.apache.org/)
 
-  > [!NOTE]
-  > Tener en cuenta que, para que el desarrollo de tu proyecto, eres libre de emplear tus herramientas preferidas.
-  > Otra alternativa a Apache NetBeans es Visual Studio Cod con JAVA. [Información Aquí](https://code.visualstudio.com/docs/java/java-tutorial)
-  > Para Visual Studio Cod utilizaremnos el servidor de aplicaciones Apache Tomcat®, en la siguiente guia. [Guía Aquí](https://code.visualstudio.com/docs/java/java-tomcat-jetty)
+> [!NOTE]
+> Tener en cuenta que, para que el desarrollo de tu proyecto, eres libre de emplear tus herramientas preferidas.
+> Otra alternativa a Apache NetBeans es Visual Studio Cod con JAVA. [Información Aquí](https://code.visualstudio.com/docs/java/java-tutorial)
+> Para Visual Studio Cod utilizaremnos el servidor de aplicaciones Apache Tomcat®, en la siguiente guia. [Guía Aquí](https://code.visualstudio.com/docs/java/java-tomcat-jetty)
 
 ## 3. Despliegue
 
