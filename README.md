@@ -51,7 +51,7 @@ Apache Tomcat es una implementación libre y de código abierto de las tecnolog�
 
 ### Clonar el proyecto
 ```sh
-git clone https://github.com/izipay-pe/Embedded-PaymentForm-Php.git
+git clone https://github.com/izipay-pe/Embedded-PaymentForm-Java
 ``` 
 
 ### Datos de conexión 
@@ -160,15 +160,15 @@ public String generarToken(Map<String, String> parameters) {
 ```
 ℹ️ Para más información: [Formtoken](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/embedded/formToken.html)
 ### Visualizar formulario
-Para desplegar la pasarela, configura la llave `public key` en el encabezado (Header) del archivo `checkout.php`. Esta llave debe ser extraída desde el Back Office del Vendedor.
+Para desplegar la pasarela, configura la llave `public key` en el encabezado (Header) del archivo `checkout.html`. Esta llave debe ser extraída desde el Back Office del Vendedor.
 
 Header: 
 Se coloca el script de la libreria necesaria para importar las funciones y clases principales de la pasarela.
 ```javascript
 <script type="text/javascript"
 src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
-kr-public-key="<?= PUBLIC_KEY ?>"
-kr-post-url-success="result.php" kr-language="es-Es">
+kr-language="es-Es"
+th:attr="kr-public-key=${publicKey}, kr-post-url-success=@{/result}">
 </script>
 
 <link rel="stylesheet" href="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/ext/classic.css">
