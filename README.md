@@ -191,7 +191,7 @@ Body:
 Se configura la función `checkHash` que realizará la validación de los datos del parámetro `kr-answer` utilizando una clave de encriptacón definida por el parámetro `kr-hash-key`
 
 ```java
-//Archivo McwController.java
+// Archivo McwController.java
 public boolean checkHash(String krHash, String krHashKey, String krAnswer){
   // Obtenemos la Password y la Clave Pública del archivo 'config.properties'
 	String passwordKey = properties.getProperty("password");
@@ -218,7 +218,7 @@ public boolean checkHash(String krHash, String krHashKey, String krAnswer){
 Se valida que la firma recibida es correcta
 
 ```java
-Archivo McwServlet.java
+// Archivo McwServlet.java
 Case "/result":
   ...
   ...
@@ -234,7 +234,7 @@ Case "/result":
 En caso que la validación sea exitosa, se puede mostrara los datos de `kr-answer` a través de un JSON y mostrar los datos del pago realizado.
 
 ```java
-Archivo McwServlet.java
+// Archivo McwServlet.java
 Case "/result":
    // Asignando los valores de la respuesta de Izipay en las variables
    krHash = request.getParameter("kr-hash");
@@ -278,7 +278,7 @@ La IPN es una notificación de servidor a servidor (servidor de Izipay hacia el 
 Se realiza la verificación de la firma utilizando la función `checkhash` y se devuelve al servidor de izipay un mensaje confirmando el estado del pago.
 
 ```java
-Archivo McwServlet.java
+// Archivo McwServlet.java
 case "/ipn":
     // Verifica el orderStatus PAID
 		orderStatus = jsonResponse.getString("orderStatus");
