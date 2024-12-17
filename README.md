@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.postimg.cc/Xv2nKS46/banner.png" alt="Formulario" width=100%/>
+  <img src="https://github.com/izipay-pe/Imagenes/blob/main/logos_izipay/logo-izipay-banner-1140x100.png?raw=true" alt="Formulario" width=100%/>
 </p>
 
 # Embedded-PaymentForm-Java
@@ -93,7 +93,8 @@ mvn package
 
 ## 💻4.1. Desplegar pasarela
 ### Autentificación
-Extraer las claves de `usuario` y `contraseña` del Backoffice Vendedor, concatenar `usuario:contraseña` y agregarlo en la solicitud del encabezado `Authorization`.
+Extraer las claves de `usuario` y `contraseña` del Backoffice Vendedor, concatenar `usuario:contraseña` y agregarlo en la solicitud del encabezado `Authorization`. Podrás encontrarlo en el archivo `src/main/resources
+/config.properties`.
 ```java
 // Archivo McwController.java
 // Encabezado Basic con concatenación de "usuario:contraseña" en base64
