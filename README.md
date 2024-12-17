@@ -108,7 +108,7 @@ Para configurar la pasarela se necesita generar un formtoken. Se realizará una 
 ```java
 public String generarToken(Map<String, String> parameters) {
     // Definiendo valores para la estructura del Json
-	  //// Crear el cuerpo de la solicitud JSON
+    //// Crear el cuerpo de la solicitud JSON
     JSONObject billingDetails = new JSONObject();
     billingDetails.put("firstName", parameters.get("firstName"));
     ...
@@ -251,10 +251,10 @@ Case "/result":
    if (isValidKey) {
 				// Establece variables en el contexto para la plantilla	
 				context.setVariable("krHash", krHash);
-        context.setVariable("krHashAlgorithm", krHashAlgorithm);
-        context.setVariable("krAnswerType", krAnswerType);
-        context.setVariable("krAnswer", krAnswer);
-        context.setVariable("krHashKey", krHashKey);
+        			context.setVariable("krHashAlgorithm", krHashAlgorithm);
+        			context.setVariable("krAnswerType", krAnswerType);
+        			context.setVariable("krAnswer", krAnswer);
+        			context.setVariable("krHashKey", krHashKey);
 				context.setVariable("pJson", pJson);
 				context.setVariable("orderStatus", orderStatus);
 				context.setVariable("orderTotalAmount", orderAmount);
