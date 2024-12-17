@@ -93,7 +93,7 @@ mvn package
 
 ## 💻4.1. Desplegar pasarela
 ### Autentificación
-Extraer las claves de `usuario` y `contraseña` del Backoffice Vendedor, concatenar `usuario:contraseña` y agregarlo en la solicitud del encabezado `Authorization`. Podrás encontrarlo en el archivo `src/main/resources/config.properties`.
+Extraer las claves de `usuario` y `contraseña` del Backoffice Vendedor, concatenar `usuario:contraseña` y agregarlo en la solicitud del encabezado `Authorization`. Podrás encontrarlo en el archivo `src/main/example/McwController.java`.
 ```java
 // Archivo McwController.java
 // Encabezado Basic con concatenación de "usuario:contraseña" en base64
