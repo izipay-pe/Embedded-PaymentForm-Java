@@ -51,7 +51,7 @@ Apache Tomcat es una implementación libre y de código abierto de las tecnolog�
 
 ### Clonar el proyecto
 ```sh
-git clone https://github.com/izipay-pe/Embedded-PaymentForm-Java
+git clone https://github.com/izipay-pe/Embedded-PaymentForm-Servlet-Java
 ``` 
 
 ### Datos de conexión 
