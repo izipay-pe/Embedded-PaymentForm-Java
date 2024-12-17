@@ -160,7 +160,7 @@ public String generarToken(Map<String, String> parameters) {
 ```
 ℹ️ Para más información: [Formtoken](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/embedded/formToken.html)
 ### Visualizar formulario
-Para desplegar la pasarela, configura la llave `public key` en el encabezado (Header) del archivo `checkout.html`. Esta llave debe ser extraída desde el Back Office del Vendedor.
+Para desplegar la pasarela, configura la llave `public key` en el encabezado (Header) del archivo `/src/main/webapp/WEB-INF/templates/checkout.html`. Esta llave debe ser extraída desde el Back Office del Vendedor.
 
 Header: 
 Se coloca el script de la libreria necesaria para importar las funciones y clases principales de la pasarela.
