@@ -161,7 +161,7 @@ public String generarToken(Map<String, String> parameters) {
 Para desplegar la pasarela, configura la llave `public key` en el encabezado (Header) del archivo `checkout.html`. Esta llave debe ser extraída desde el Back Office del Vendedor.
 
 Header: 
-Se coloca el script de la libreria necesaria para importar las funciones y clases principales de la pasarela. Podrás encontrarlo en el archivo `/src/main/webapp/WEB-INF/templates/checkout.html`.
+Se coloca el script de la libreria necesaria para importar las funciones y clases principales de la pasarela. Podrás encontrarlo en el archivo `src/main/webapp/WEB-INF/templates/checkout.html`.
 ```javascript
 <script type="text/javascript"
 src="https://static.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
