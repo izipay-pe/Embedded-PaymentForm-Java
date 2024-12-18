@@ -93,7 +93,7 @@ mvn package
 
 ## 💻4.1. Desplegar pasarela
 ### Autentificación
-Extraer las claves de `usuario` y `contraseña` del Backoffice Vendedor, concatenar `usuario:contraseña` y agregarlo en la solicitud del encabezado `Authorization`. Podrás encontrarlo en el archivo `src/main/example/McwController.java`.
+Extraer las claves de `usuario` y `contraseña` del Backoffice Vendedor, concatenar `usuario:contraseña` y agregarlo en la solicitud del encabezado `Authorization`. Podrás encontrarlo en el archivo `src/main/java/com/example/McwController.java`.
 ```java
 // Encabezado Basic con concatenación de "usuario:contraseña" en base64
 String encoded = Base64.getEncoder().encodeToString((merchantCode+":"+password).getBytes(StandardCharsets.UTF_8));
@@ -103,7 +103,7 @@ conn.setRequestProperty("Authorization", "Basic "+encoded);
 ```
 ℹ️ Para más información: [Autentificación](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/embedded/keys.html)
 ### Crear formtoken
-Para configurar la pasarela se necesita generar un formtoken. Se realizará una solicitud API REST a la api de creación de pagos:  `https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment` con los datos de la compra para generar el formtoken. Podrás encontrarlo en el archivo `src/main/example/McwController.java`.
+Para configurar la pasarela se necesita generar un formtoken. Se realizará una solicitud API REST a la api de creación de pagos:  `https://api.micuentaweb.pe/api-payment/V4/Charge/CreatePayment` con los datos de la compra para generar el formtoken. Podrás encontrarlo en el archivo `src/main/java/com/example/McwController.java`.
 
 ```java
 public String generarToken(Map<String, String> parameters) {
@@ -187,7 +187,7 @@ Body:
 ## 💳4.2. Analizar resultado del pago
 
 ### Validación de firma
-Se configura la función `checkHash` que realizará la validación de los datos del parámetro `kr-answer` utilizando una clave de encriptacón definida por el parámetro `kr-hash-key`. Podrás encontrarlo en el archivo `src/main/example/McwController.java`.
+Se configura la función `checkHash` que realizará la validación de los datos del parámetro `kr-answer` utilizando una clave de encriptacón definida por el parámetro `kr-hash-key`. Podrás encontrarlo en el archivo `src/main/java/com/example/McwController.java`.
 
 ```java
 public boolean checkHash(String krHash, String krHashKey, String krAnswer){
@@ -213,7 +213,7 @@ public boolean checkHash(String krHash, String krHashKey, String krAnswer){
   }
 ```
 
-Se valida que la firma recibida es correcta. Podrás encontrarlo en el archivo `src/main/example/McwServlet.java`.
+Se valida que la firma recibida es correcta. Podrás encontrarlo en el archivo `src/main/java/com/example/McwServlet.java`.
 
 ```java
 Case "/result":
@@ -228,7 +228,7 @@ Case "/result":
     break;
   }
 ```
-En caso que la validación sea exitosa, se puede mostrara los datos de `kr-answer` a través de un JSON y mostrar los datos del pago realizado. Podrás encontrarlo en el archivo `src/main/example/McwServlet.java`.
+En caso que la validación sea exitosa, se puede mostrara los datos de `kr-answer` a través de un JSON y mostrar los datos del pago realizado. Podrás encontrarlo en el archivo `src/main/java/com/example/McwServlet.java`.
 
 ```java
 Case "/result":
@@ -273,7 +273,7 @@ Case "/result":
 La IPN es una notificación de servidor a servidor (servidor de Izipay hacia el servidor del comercio) que facilita información en tiempo real y de manera automática cuando se produce un evento, por ejemplo, al registrar una transacción.
 
 
-Se realiza la verificación de la firma utilizando la función `checkhash` y se devuelve al servidor de izipay un mensaje confirmando el estado del pago. Podrás encontrarlo en el archivo `src/main/example/McwServlet.java`.
+Se realiza la verificación de la firma utilizando la función `checkhash` y se devuelve al servidor de izipay un mensaje confirmando el estado del pago. Podrás encontrarlo en el archivo `src/main/java/com/example/McwServlet.java`.
 
 ```java
 case "/ipn":
