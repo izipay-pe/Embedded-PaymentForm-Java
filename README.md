@@ -2,7 +2,7 @@
   <img src="https://github.com/izipay-pe/Imagenes/blob/main/logos_izipay/logo-izipay-banner-1140x100.png?raw=true" alt="Formulario" width=100%/>
 </p>
 
-# Embedded-PaymentForm-Java
+# Embedded-PaymentForm-Servlet-Java
 
 ## Índice
 
